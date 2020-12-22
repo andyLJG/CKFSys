@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="GB2312"?>
+<VM3XXCFG>
+	<SKIN SkinFile="corona-CORONA12.skn"/>
+	<COMPORT>
+		<COM_MAIN PortName="" Baud="9600" IntervalTimeout="50"/>
+		<COM_SIGS PortName="COM1" Baud="9600" IntervalTimeout="100"/>
+	</COMPORT>
+	<REGS>
+		<REG0 Addr="0" caption="模块地址" node="模块地址，应设置为1~127、129~254"/>
+		<REG1 Addr="1" caption="通讯速率" node="百bps，此值*100即是实际通讯速率"/>
+		<REG2 Addr="2" caption="" node="预留，暂未定义功能"/>
+		<REG3 Addr="3" caption="系统功能" node="系统功能寄存器。0x01:重启;0x02:恢复出厂参数;0x03:读取版本信息;0x1x:单次测量;0x3x:单次测量"/>
+		<REG4 Addr="4" caption="" node="预留，暂未定义功能"/>
+		<REG5 Addr="5" caption="工作模式" node="连续测量或单次测量"/>
+		<REG6 Addr="6" caption="测量间隔" node="每次发送激励信号前强制等待的时长，单位：ms"/>
+		<REG7 Addr="7" caption="自动上传" node="自动上传哪些数据值，每1位（bit）对应一种数据"/>
+		<REG8 Addr="8" caption="延时读取" node="对传感器钢弦进行激励完成后，等待多长时间开始采样"/>
+		<REG9 Addr="9" caption="采样数量" node="每次测量时采集传感器返回的多少个周期的数据，1~300"/>
+		<REG10 Addr="10" caption="激励方法" node="采用什么方法对传感器钢弦进行激励"/>
+		<REG11 Addr="11" caption="" node="内部使用，严禁修改（默认33333）"/>
+		<REG12 Addr="12" caption="" node="内部使用，严禁修改（默认5）"/>
+		<REG13 Addr="13" caption="泵压时长" node="高压激励时，泵压过程最大时长，单位：ms"/>
+		<REG14 Addr="14" caption="期望电压" node="高压激励时，预期激励电压参数，单位：V"/>
+		<REG15 Addr="15" caption="扫频下限" node="扫频激励时，输出信号的频率下限，单位：Hz"/>
+		<REG16 Addr="16" caption="扫频上限" node="扫频激励时，输出信号的频率上限，单位：Hz"/>
+		<REG17 Addr="17" caption="扫频步进" node="扫频激励时，输出信号每步频率间隔，单位：Hz"/>
+		<REG18 Addr="18" caption="扫频单步周期数" node="扫频激励时单步信号输出周期个数"/>
+		<REG19 Addr="19" caption="滤波方法" node="指定递推滤波方法，0:不滤波;1:中值;2:平均;3:中位平均;4:加权平均"/>
+		<REG20 Addr="20" caption="滤波样本数量" node="频率值递推滤波使用的历史数据数量，3~30"/>
+		<REG21 Addr="21" caption="粗差剔除参数" node="单个样本数据误差超过频率值的1/n时，将数据剔除"/>
+		<REG22 Addr="22" caption="优质样本限制" node="优质样本数量不足1/n时不进行频率解算，样本质量强度为0%"/>
+		<REG23 Addr="23" caption="信号放大倍数" node="设置信号放大倍数，需要硬件支持"/>
+		<REG24 Addr="24" caption="反馈扫频上下限" node="反馈渐变法时，扫频频率范围距离中心频率上下限频率值，高字节为上限差，低字节为下限差，单位Hz"/>
+		<REG25 Addr="25" caption="" node="预留，暂未定义功能"/>
+		<REG26 Addr="26" caption="温度计算参数1" node="热敏电阻B值，需要咨询传感器厂商确定"/>
+		<REG27 Addr="27" caption="温度计算参数2" node="热敏电阻阻值修正系数"/>
+		<REG28 Addr="28" caption="温度传感器类型" node="温度传感器类型设置参数"/>
+		<REG29 Addr="29" caption="质量门限" node="传感器返回信号综合质量评定限制门限参数"/>
+		<REG30 Addr="30" caption="信号幅值上下限" node="信号幅值上限+信号幅值下限，单位：%"/>
+		<REG31 Addr="31" caption="" node="内部校验，不要写入任何数据"/>
+		<REG32 Addr="32" caption="运行状态" node="模块运行状态，每bit表示一种状态类别"/>
+		<REG33 Addr="33" caption="当前扫频频率" node="低压扫频激励正在使用的输出信号频率，单位：Hz"/>
+		<REG34 Addr="34" caption="样本质量" node="优质采样数据的质量评定值，单位：%"/>
+		<REG35 Addr="35" caption="传感器频率值" node="传感器频率值，单位：0.1Hz"/>
+		<REG36 Addr="36" caption="频模高16位" node="频模=频率值(Hz)*频率值(Hz)/100"/>
+		<REG37 Addr="37" caption="频模低16位" node="频模=频率值(Hz)*频率值(Hz)/100"/>
+		<REG38 Addr="38" caption="输入电压/ADC01" node="模块供电电压值，单位：0.01V"/>
+		<REG39 Addr="39" caption="线圈电阻" node="传感器线圈电阻值，单位：欧姆"/>
+		<REG40 Addr="40" caption="实时激励电压" node="加载到传感器线圈上的激励信号电压值，单位：0.01V"/>
+		<REG41 Addr="41" caption="温度值" node="单位：0.1℃"/>
+		<REG42 Addr="42" caption="样本标准差" node="全部采样数据标准差+优质采样数据标准差"/>
+		<REG43 Addr="43" caption="优质样本数量" node="所有采样数量剔除粗差后剩余的采样数据数量"/>
+		<REG44 Addr="44" caption="信号幅值高16位" node="激励后返回信号幅值+采样开始时信号幅值"/>
+		<REG45 Addr="45" caption="信号幅值低16位" node="结束采样时信号幅值+当前测量平均信号幅值"/>
+		<REG46 Addr="46" caption="GPIO" node="通用输入输出管脚控制寄存器"/>
+		<REG47 Addr="47" caption="ADC02" node="实时AD值，0~2.2V对应0~4095"/>
+		<REG48 Addr="48" caption="ADC03" node="实时AD值，0~2.2V对应0~4095"/>
+		<REG49 Addr="49" caption="ADC04" node="实时AD值，0~2.2V对应0~4095"/>
+		<REG50 Addr="50" caption="" node=""/>
+		<REG51 Addr="51" caption="" node=""/>
+		<REG52 Addr="52" caption="OOO" node=""/>
+		<REG53 Addr="53" caption="" node=""/>
+		<REG54 Addr="54" caption="" node=""/>
+		<REG55 Addr="55" caption="" node=""/>
+		<REG56 Addr="56" caption="FIX_TM" node=""/>
+		<REG57 Addr="57" caption="FIX_CY" node=""/>
+		<REG58 Addr="58" caption="FIX_OC" node=""/>
+		<REG59 Addr="59" caption="FIX_NTC" node=""/>
+		<REG60 Addr="60" caption="FIX_VDD" node=""/>
+		<REG61 Addr="61" caption="FIX_OPWMA" node=""/>
+		<REG62 Addr="62" caption="FIX_OPWMB" node=""/>
+		<REG63 Addr="63" caption="FIX_NR" node=""/>
+	</REGS>
+</VM3XXCFG>
